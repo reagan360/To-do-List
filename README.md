@@ -2,29 +2,39 @@ The To-Do List application is a simple task management tool built with Bootstrap
 
 Features
 
-User Authentication: Users can securely register, log in, and manage their tasks with hashed passwords for enhanced security.
+User Authentication: 
+Users can securely register, log in, and manage their tasks with hashed passwords for enhanced security.
 
-Task Management: Users can add, edit, and delete tasks in their to-do list. Responsive Frontend: The frontend interface is responsive, ensuring compatibility across various devices and screen sizes.
+Task Management: 
+Users can add, edit, and delete tasks in their to-do list. 
 
-Technologies Used Frontend:Bootstrap Backend:Spring Boot Database:MySQL
+Technologies Used 
+Frontend:
+- Bootstrap
+Backend:
+- Spring Boot 
+Database:
+- MySQL
 
-Prerequisites Java Development Kit (JDK) MySQL Database MySQL Workbench
+Prerequisites 
+- Java Development Kit (JDK)
+- MySQL Workbench
 
 Maven (for building the Spring Boot application)
 
 GET STARTED
 
-download the to do_list_project
+1. Download the to do_list_project
 
-Download MySql Workbench
+2.Download MySql Workbench
 
-Creaye database name todolist
+3. Creaye database name todolist
 
-Update the database configuration in the SpringBoot Application properties file
+4. Update the database configuration in the SpringBoot Application properties file
 
-Run the Spring Boot application
+5. Run the Spring Boot application
 
-access the application at: http://localhost:8080
+6. access the application at: http://localhost:8080
 
 
 PROJECT VIDEO
