@@ -1,0 +1,64 @@
+<!-- tasks.html -->
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/baseuser::layout(~{::section})">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+
+<section>
+
+    <div class="container mt-5">
+        <h4 class="text-success">Wlecome [[${user.fullName}]]</h4>
+        <hr />
+        <p><a class="btn btn-primary " href="create-todo">
+            <i class="bi bi-plus-square-fill"></i> <b>Create a Todo</b></a>
+        </p>
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+
+                <th>#</th>
+                <th>Description</th>
+                <th>Is Complete</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item : ${taskItems}" th:class="${item.isComplete} ? 'alert alert-success' : ''">
+
+                <td th:text="${itemStat.index + 1}"></td>
+                <td th:text="${item.description}"></td>
+                <td>
+                    <span th:if="${item.isComplete} == true" th:text="Yes"></span>
+                    <span th:unless="${item.isComplete} == true" th:text="No"></span>
+                </td>
+                <td th:text="${item.createdAt}"></td>
+                <td th:text="${item.updatedAt}"></td>
+
+                <td>
+                    <div class="btn btn-group-sm" role="group">
+                        <a class="btn btn-primary text-white " th:href="@{edit/{id}(id=${item.id})}">
+                          Edit</a>
+                        <a class="btn btn-danger" th:href="@{delete/{id}(id=${item.id})}">
+                            Delete</a>
+
+
+                    </div>
+                <td>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</section>
+</body>
+</html>

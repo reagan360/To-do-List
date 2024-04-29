@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/baseuser::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+<section>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header text-center fs-4 bg-primary text-white"><b>Add a new Todo Item</b> </div>
+
+                    <div class="card-body">
+                        <form action="#" th:action="@{todo/{id}(id=${task.id})}" th:object="${task}" method="POST">
+                            <div class="mb-3">
+                                <label for="description">Description</label>
+                                <input class="form-control"
+                                       type="text"
+                                       th:field="*{description}"
+                                       id="description"
+                                       placeholder="Description"
+                                >
+                            </div>
+
+                            <div class="mb-3">
+                                <input class="form-check-input"
+                                       type="checkbox"
+                                       id="inputIsComplete"
+                                       th:field="*{isComplete}"
+                                       th:checked="${isComplete} == true">
+                                <label class="form-check-label" for="inputIsComplete">
+                                    Completed?
+                                </label>
+                            </div>
+                            <input type="hidden" th:field="*{createdAt}" />
+                            <input type="hidden" th:field="*{updatedAt}" />
+                            <button type="submit" class="btn btn-success col-md-12 mb-3">Submit</button>
+                            <p><a class="btn btn-primary col-md-12 mb-3" href="/user/">
+                                <i class="bi bi-arrow-left-square-fill"></i> Back</a>
+                            </p>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
