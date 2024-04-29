@@ -1,5 +1,8 @@
 The To-Do List application is a simple task management tool built with Bootstrap for the frontend, Spring Boot for the backend, and MySQL Workbench for the database. It provides user authentication features such as login, registration, and password hashing, along with basic task management functionalities.
 
+PROJECT VIDEO
+https://youtu.be/EECbHyeZXUQ
+
 Features
 
 User Authentication: 
@@ -37,6 +40,5 @@ GET STARTED
 6. access the application at: http://localhost:8080
 
 
-PROJECT VIDEO
-https://youtu.be/EECbHyeZXUQ
+
 
