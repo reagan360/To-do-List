@@ -1,2 +1,1 @@
-# To-do-List
-The To-Do List application is a simple yet powerful task management tool designed to help users organize their daily tasks effectively. It provides a user-friendly interface for creating, editing, and deleting tasks, along with user authentication to ensure data privacy.
+The To-Do List application is a simple task management tool built with Bootstrap for the frontend, Spring Boot for the backend, and MySQL Workbench for the database. It provides user authentication features such as login, registration, and password hashing, along with basic task management functionalities.
